@@ -60,6 +60,18 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "serve":{
+              "fileReplacements": [
+                {
+                  "replace": "src/app/app-color.ts",
+                  "with": "src/app/app-color-replace.ts"
+                },
+                {
+                  "replace": "src/app/_app-color.scss",
+                  "with": "src/app/_app-color-replace.scss"
+                }
+              ]
             }
           }
         },
@@ -71,6 +83,9 @@
           "configurations": {
             "production": {
               "browserTarget": "file-replacements-scss:build:production"
+            },
+            "serve": {
+              "browserTarget": "file-replacements-scss:build:serve"
             }
           }
         },
